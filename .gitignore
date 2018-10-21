@@ -1,3 +1,8 @@
+# Added by myself:
+.idea/ # Jetbrains IDEA Files
+
+# Standard Python .gitignore by GitHub
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
