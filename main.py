@@ -23,7 +23,7 @@ def get_screensize(multiplier):
     except:
         print(f"Encountered some problems while detecting your display size.")
         traceback.print_exc()
-        sys.exit()
+        sys.exit(1)
 
 
 def get_image(multiplier):
@@ -41,7 +41,7 @@ def get_image(multiplier):
     except:
         print(f"Encountered some problems while downloading the image.")
         traceback.print_exc()
-        sys.exit()
+        sys.exit(1)
 
 
 print(f"Unsplash Wallpaper v{__version__} by tobimori\n")
@@ -54,10 +54,9 @@ if osvar == "Windows":
     try:
         ctypes.windll.user32.SystemParametersInfoW(20, 0, filepath_absolute, 0)
         print("\nDone!")
-        sys.exit()
     except:
         print(f"Couldn't set your wallpaper.")
         traceback.print_exc()
-        sys.exit()
+        sys.exit(1)
 else:
     print("Sorry, only supporting Windows right now. Feel free to fork and add support ;)")
