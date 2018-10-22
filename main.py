@@ -1,5 +1,5 @@
 # Unsplash Wallpaper
-__version__ = "1.1"
+__version__ = "1.2"
 # last edited @ 22.10.2018
 # by tobimori
 
