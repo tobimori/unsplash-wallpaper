@@ -1,5 +1,6 @@
 # Added by myself:
 .idea/ # Jetbrains IDEA Files
+.unsplash/ # Files by Software
 
 # Standard Python .gitignore by GitHub
 
