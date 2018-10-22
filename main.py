@@ -9,6 +9,8 @@ import urllib.request
 import time
 import ctypes
 import traceback
+import sys
+
 
 def get_screensize(multiplier):
     try:
@@ -21,7 +23,7 @@ def get_screensize(multiplier):
     except:
         print(f"Encountered some problems while detecting your display size.")
         traceback.print_exc()
-        exit()
+        sys.exit()
 
 
 def get_image(multiplier):
@@ -39,7 +41,7 @@ def get_image(multiplier):
     except:
         print(f"Encountered some problems while downloading the image.")
         traceback.print_exc()
-        exit()
+        sys.exit()
 
 
 print(f"Unsplash Wallpaper v{__version__} by tobimori\n")
@@ -52,10 +54,10 @@ if osvar == "Windows":
     try:
         ctypes.windll.user32.SystemParametersInfoW(20, 0, filepath_absolute, 0)
         print("\nDone!")
-        exit()
+        sys.exit()
     except:
         print(f"Couldn't set your wallpaper.")
         traceback.print_exc()
-        exit()
+        sys.exit()
 else:
     print("Sorry, only supporting Windows right now. Feel free to fork and add support ;)")
