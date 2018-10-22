@@ -1,5 +1,5 @@
 # Unsplash Wallpaper
-__version__ = "0.1"
+__version__ = "1.0"
 # last edited @ 22.10.2018
 # by tobimori
 
@@ -28,7 +28,8 @@ def get_image():
     if not os.path.exists(directory):
         os.makedirs(directory)
         print("Found no temporary directory. Creating one.")
-    filepath = directory + "/" + str(time.time()) + ".jpg"
+    filepath = directory + "/" + str(time.time()) + ".jpg"#
+    print(f"Starting download...")
     try:
         screensize = get_screensize(2)
         urllib.request.urlretrieve("https://source.unsplash.com/random/" + screensize, filepath)
@@ -37,6 +38,7 @@ def get_image():
     except:
         print("Something failed while downloading the image.")
         exit()
+
 
 print(f"Unsplash Wallpaper v{__version__} by tobimori\n")
 osvar = platform.system()
