@@ -1,4 +1,4 @@
-# unsplash-wallpaper v1.0
+# unsplash-wallpaper v1.1
 One of my first python applications, which automatically downloads a wallpaper of unsplash.com to get yourself a nice looking desktop. Currently only working with Windows. Tested on Windows 10.
 
 As this is GitHub, feel free to fork and open a pull request for other platforms.
